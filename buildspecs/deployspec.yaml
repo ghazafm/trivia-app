@@ -11,7 +11,7 @@ phases:
   build:
     commands:
       - sam build
-      - sam deploy --stack-name trivia-app --s3-bucket ghaza-trivia-app-bucket --no-fail-on-empty-changeset
+      - sam deploy --stack-name trivia-app --s3-bucket ghaza-trivia-app-bucket --capabilities CAPABILITY_IAM --no-fail-on-empty-changeset
       - cd front-end-react
       - npm install
       - npm run build
